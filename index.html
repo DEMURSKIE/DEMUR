@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEMUR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Cinzel',serif;
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+url("https://images.unsplash.com/photo-1514565131-fce0801e5785?q=80&w=2000");
+background-size:cover;
+background-position:center;
+z-index:-2;
+}
+
+body::after{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:radial-gradient(circle,#7a0000 0%,transparent 60%);
+opacity:.3;
+z-index:-1;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,.7);
+backdrop-filter:blur(10px);
+padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#c1121f;
+text-shadow:0 0 20px #c1121f;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:80px;
+color:#c1121f;
+text-shadow:0 0 30px #c1121f;
+animation:glow 3s infinite;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin-top:20px;
+}
+
+@keyframes glow{
+50%{
+text-shadow:0 0 50px #ff0000;
+}
+}
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:15px 35px;
+border-radius:50px;
+background:#8b0000;
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.05);
+background:#c1121f;
+}
+
+section{
+padding:100px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.1);
+padding:30px;
+border-radius:25px;
+margin-top:20px;
+}
+
+h2{
+color:#c1121f;
+margin-bottom:20px;
+}
+
+footer{
+padding:40px;
+text-align:center;
+background:black;
+margin-top:100px;
+}
+
+.sakura{
+position:fixed;
+top:-20px;
+font-size:20px;
+animation:fall linear infinite;
+pointer-events:none;
+opacity:.6;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-50px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">DEMUR</div>
+
+<nav>
+<a href="#about">О нас</a>
+<a href="#links">Ссылки</a>
+<a href="#legend">Легенда</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<h1>DEMUR</h1>
+
+<p>
+место, где тени становятся легендами
+</p>
+
+<a class="button" href="https://t.me/dmurskie">
+Telegram
+</a>
+
+<a class="button" href="https://www.tiktok.com/@archangelskiee">
+TikTok
+</a>
+
+</section>
+
+<section id="about">
+
+<div class="card">
+<h2>О нас</h2>
+
+<p>
+добро пожаловать в DEMUR.
+сообщество в эстетике азиатской мифологии,
+красных фонарей, древних легенд и загадочной атмосферы.
+</p>
+
+</div>
+
+</section>
+
+<section id="legend">
+
+<div class="card">
+
+<h2>Легенда DEMUR</h2>
+
+<p>
+среди алых фонарей и древних храмов
+существует место, где собираются люди,
+ищущие новые знакомства, творчество
+и собственную историю.
+</p>
+
+</div>
+
+</section>
+
+<section id="links">
+
+<div class="card">
+
+<h2>Наши ссылки</h2>
+
+<p>Telegram канал</p>
+
+<a class="button" href="https://t.me/dmurskie">
+Перейти
+</a>
+
+<br><br>
+
+<p>TikTok</p>
+
+<a class="button" href="https://www.tiktok.com/@archangelskiee">
+Перейти
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© DEMUR
+</footer>
+
+<script>
+
+for(let i=0;i<25;i++){
+
+let sakura=document.createElement("div");
+
+sakura.innerHTML="🌸";
+
+sakura.classList.add("sakura");
+
+sakura.style.left=Math.random()*100+"vw";
+
+sakura.style.animationDuration=
+(5+Math.random()*10)+"s";
+
+sakura.style.fontSize=
+(10+Math.random()*20)+"px";
+
+document.body.appendChild(sakura);
+
+}
+
+</script>
+
+</body>
+</html>
