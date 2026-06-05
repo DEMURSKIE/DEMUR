@@ -263,19 +263,24 @@ for(let i=0;i<25;i++){
 
 let sakura=document.createElement("div");
 
-sakura.innerHTML="🌸";
+sakura.innerHTML="";
 
-sakura.classList.add("sakura");
+.sakura{
+position:fixed;
+top:-20px;
+width:12px;
+height:18px;
+background:#8b0000;
+border-radius:50% 0 50% 50%;
+transform:rotate(45deg);
+animation:fall linear infinite;
+pointer-events:none;
+box-shadow:
+0 0 10px rgba(139,0,0,.8),
+0 0 20px rgba(255,0,0,.4);
+opacity:.85;
+}
 
-sakura.style.left=Math.random()*100+"vw";
-
-sakura.style.animationDuration=
-(5+Math.random()*10)+"s";
-
-sakura.style.fontSize=
-(10+Math.random()*20)+"px";
-
-document.body.appendChild(sakura);
 
 }
 
