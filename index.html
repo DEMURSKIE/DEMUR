@@ -165,6 +165,31 @@ transform:translateY(110vh) rotate(360deg);
 }
 }
 </style>
+
+.projects-slider{
+display:flex;
+gap:20px;
+width:max-content;
+animation:scrollLeft 20s linear infinite;
+}
+
+.project-card{
+min-width:300px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+border-radius:25px;
+padding:30px;
+backdrop-filter:blur(10px);
+}
+
+@keyframes scrollLeft{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(-50%);
+}
+}
 </head>
 
 <body>
@@ -175,7 +200,7 @@ transform:translateY(110vh) rotate(360deg);
 <nav>
 <a href="#about">О нас</a>
 <a href="#links">Ссылки</a>
-<a href="#legend">Легенда</a>
+<a href="#projects">Проекты</a>
 </nav>
 </header>
 
@@ -212,18 +237,37 @@ TikTok
 
 </section>
 
-<section id="legend">
+<section id="projects">
 
 <div class="card">
 
-<h2>Легенда DEMUR</h2>
+<h2>Проекты DEMUR</h2>
 
-<p>
-среди алых фонарей и древних храмов
-существует место, где собираются люди,
-ищущие новые знакомства, творчество
-и собственную историю.
-</p>
+<div class="projects-slider">
+
+<div class="project-card">
+<h3>Чаты</h3>
+<p>Общение, знакомства и участие в проектах DEMUR.</p>
+<a class="button" href="https://t.me/dmurskie/5">Подробнее</a>
+</div>
+
+<div class="project-card">
+<h3>MUR</h3>
+<p>Место поиска КФ, семьи, СП и новых знакомств.</p>
+<a class="button" href="https://t.me/isdmur">Подробнее</a>
+</div>
+
+<div class="project-card">
+<h3>MEDIA VIRT</h3>
+<p>Медиа-площадка проекта DEMUR. Новости, контент и публикации.</p>
+<a class="button" href="#">Подробнее</a>
+</div>
+
+<div class="project-card">
+<h3>FRAY</h3>
+<p>Место, где вы можете отвлечься и насладиться работой прекрасных хостов.</p>
+<a class="button" href="#">Подробнее</a>
+</div>
 
 </div>
 
