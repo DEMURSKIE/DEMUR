@@ -164,32 +164,24 @@ transform:translateY(-50px) rotate(0deg);
 transform:translateY(110vh) rotate(360deg);
 }
 }
-</style>
-
-.projects-slider{
+.projects-container{
 display:flex;
+flex-wrap:wrap;
+justify-content:center;
 gap:20px;
-width:max-content;
-animation:scrollLeft 20s linear infinite;
+margin-top:30px;
 }
 
 .project-card{
-min-width:300px;
+width:300px;
 background:rgba(255,255,255,.05);
 border:1px solid rgba(255,255,255,.1);
 border-radius:25px;
-padding:30px;
+padding:25px;
 backdrop-filter:blur(10px);
 }
+</style>
 
-@keyframes scrollLeft{
-from{
-transform:translateX(0);
-}
-to{
-transform:translateX(-50%);
-}
-}
 </head>
 
 <body>
@@ -237,13 +229,12 @@ TikTok
 
 </section>
 
-<section id="projects">
 
-<div class="card">
+<section id="projects">
 
 <h2>Проекты DEMUR</h2>
 
-<div class="projects-slider">
+<div class="projects-container">
 
 <div class="project-card">
 <h3>Чаты</h3>
@@ -274,6 +265,7 @@ TikTok
 </section>
 
 <section id="links">
+
 
 <div class="card">
 
