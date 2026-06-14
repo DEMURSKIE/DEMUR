@@ -164,22 +164,47 @@ transform:translateY(-50px) rotate(0deg);
 transform:translateY(110vh) rotate(360deg);
 }
 }
+.projects-wrapper{
+overflow:hidden;
+width:100%;
+}
+
 .projects-container{
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-margin-top:30px;
+gap:25px;
+width:max-content;
+animation:scrollLeft 35s linear infinite;
+padding-top:20px;
 }
 
 .project-card{
-width:300px;
+width:320px;
 background:rgba(255,255,255,.05);
 border:1px solid rgba(255,255,255,.1);
 border-radius:25px;
 padding:25px;
 backdrop-filter:blur(10px);
+flex-shrink:0;
 }
+
+.project-card h3{
+color:#c1121f;
+margin-bottom:15px;
+}
+
+.project-card p{
+margin-bottom:20px;
+line-height:1.6;
+}
+
+@keyframes scrollLeft{
+0%{
+transform:translateX(0);
+}
+100%{
+transform:translateX(-50%);
+}
+
 </style>
 
 </head>
@@ -234,6 +259,8 @@ TikTok
 
 <h2>Проекты DEMUR</h2>
 
+<div class="projects-wrapper">
+
 <div class="projects-container">
 
 <div class="project-card">
@@ -258,6 +285,8 @@ TikTok
 <h3>FRAY</h3>
 <p>Место, где вы можете отвлечься и насладиться работой прекрасных хостов.</p>
 <a class="button" href="#">Подробнее</a>
+</div>
+
 </div>
 
 </div>
